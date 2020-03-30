@@ -12,7 +12,10 @@ $session->CheckSession();
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="Vendor/CSS/checker.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="Vendor/CSS/checker.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+
     <link rel="stylesheet" href="Vendor/CSS/loading.css">
     <script src="Vendor/JS/pace.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
@@ -40,6 +43,9 @@ $session->CheckSession();
                     <li class="nav-item">
                         <a class="nav-link tablinks" data-cheker="gate3" onclick="openGate(event, 'gate3')"
                             id="defaultOpen" href="#"><i class="fas fa-torii-gate"></i>Gate 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="defaultOpen" href="profile.php"><i class="fas fa-torii-gate"></i>profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="defaultOpen" href="middleware/logout.php"><i class="fas fa-torii-gate"></i>Logout</a>

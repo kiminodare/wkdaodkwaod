@@ -1,6 +1,6 @@
 <?php 
  
-$koneksi = mysqli_connect("localhost","checker_kiminodare","YPs)a+e.aU+z","checker_wibu");
+$koneksi = mysqli_connect("localhost","root","","cheker_ku");
  
 // Check connection
 // if (mysqli_connect_errno()){

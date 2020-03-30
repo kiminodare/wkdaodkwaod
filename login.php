@@ -12,7 +12,6 @@ $row = mysqli_fetch_assoc($result);
 if($cek > 0){
     $log = new LogActivity();
     $_SESSION['is_login'] = true;
-    $_SESSION['credit'] = $row['credit'];
     $_SESSION['username'] = $row['username'];
     $_SESSION['id'] = $row['id'];
     $date = date('Y-m-d H:i:s');

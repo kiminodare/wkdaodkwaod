@@ -14,8 +14,12 @@ $row = mysqli_fetch_assoc($result);
 $id = $_SESSION['id'];
 $username = $_SESSION['username'];
 if($session->CheckSession()){
+    $id = $_SESSION['id'];
+    $query = "SELECT * FROM user WHERE id='$id'";
+    $result =@mysqli_query($koneksi,$query);
+    $row = mysqli_fetch_assoc($result);
 
-if ($_SESSION['credit'] != 0) {
+if ($row['credit'] != 0) {
     $post_cc = $_POST['cc'];
     $gate =  $_POST['gate_checker'];
     $results = [];

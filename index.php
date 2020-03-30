@@ -1,8 +1,7 @@
 
 <?php
   session_start();
-  $is_login = $_SESSION['is_login'];
- if ($is_login) {
+ if (isset($_SESSION['is_login'])) {
    header('location:checker.php');
  } 
 
