@@ -1,0 +1,17 @@
+<center>
+        <div class="atas_header">
+            <p>Checker LoLiPeDo</p>
+        </div>
+    </center>
+    <center>
+        <textarea class="ta10" id="pop" value="clear" placeholder="4111111111111111|MM|YY|CVV
+4111111111111111|MMYY|CVV
+4111111111111111|MM/YY|CVV
+4111111111111111|MM|YYYY|CVV" name="val" cols="10" rows="20" style="width: 588px; height: 168px;"></textarea><br>
+        <input type="checkbox" name="show_credit" id="show_credit" value="show_credit" checked=""> Show Credit &nbsp;
+        <br><br>
+        <input type="submit" class="startbtn" value="Start"></input>
+        <p>CHARGE: 1 USD<br>live -2 CRE/ dead -1 CRE<br>RECHECK if UNKNOWN</p>
+                <textarea class="w3mission" rows="4" cols="50"></textarea>
+            
+    </center>

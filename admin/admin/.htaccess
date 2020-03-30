@@ -1,0 +1,34 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteBase /
+
+#login
+###RewriteRule ^login.html login.php [QSA,L]
+###RewriteRule ^login-admin.html /login-admin.php [QSA,L]
+
+#home
+###RewriteRule ^home.html home.php [QSA,L]
+
+#add
+###RewriteRule ^([a-z_0-9-]+)/add.html data.php?item=$1&action=add [QSA,L]
+
+#edit|delete
+###RewriteRule ^([a-z_0-9-]+)/(edit|delete)/([0-9]+).html data.php?item=$1&action=$2&ID=$3 [QSA,L]
+
+#list + pagination
+###RewriteRule ^([a-z_0-9-]+)-p([0-9]+).html data.php?item=$1&action=list&p=$2 [QSA,L]
+
+#list
+###RewriteRule ^([a-z_0-9-]+).html data.php?item=$1&action=list [QSA,L]
+
+############################################################################
+
+#RewriteRule . /admin/index.php [QSA,L]
+
+# Store the current location in an environment variable CWD
+RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
+RewriteRule ^.*$ - [E=CWD:%2]
+
+# Just by prefixing the environment variable, we can safely rewrite anything now
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . %{ENV:CWD}$1.$3 [L]
